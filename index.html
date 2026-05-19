@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="トリミングサロンの集客を「仕組み」で整える。SNS・HP・予約導線を一括設計。無料相談受付中。">
+  <title>集客が回るサロンへ｜ペットサロン集客サポート</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">
+        <span class="header__logo-icon">🐾</span>
+        <span class="header__logo-text">Salon<span>Flow</span></span>
+      </a>
+      <nav class="header__nav" aria-label="メインナビゲーション">
+        <a href="#problem">お悩み</a>
+        <a href="#solution">解決策</a>
+        <a href="#service">サービス</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#cta" class="header__cta btn btn--primary btn--sm">無料相談</a>
+      <button class="header__menu-btn" id="menuBtn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav>
+      <a href="#problem">お悩み</a>
+      <a href="#solution">解決策</a>
+      <a href="#benefit">変化</a>
+      <a href="#service">サービス</a>
+      <a href="#results">実績</a>
+      <a href="#faq">FAQ</a>
+      <a href="#cta" class="btn btn--primary">無料相談する</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ① ファーストビュー -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__blob hero__blob--1"></div>
+        <div class="hero__blob hero__blob--2"></div>
+        <div class="hero__pattern"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <div class="hero__badge">
+            <span class="pulse-dot"></span>
+            ペットサロン専門の集客設計
+          </div>
+          <h1 class="hero__title">
+            <span class="hero__title-line">新規が増えない</span>
+            <span class="hero__title-line hero__title-line--accent">トリミングサロンへ</span>
+            <span class="hero__title-highlight">"何もしなくても集客が回る状態"</span>
+            <span class="hero__title-line">を作ります</span>
+          </h1>
+          <p class="hero__sub">
+            SNS・HP・予約導線を整え<br>
+            <strong>「なんとなく集客」から卒業</strong>しませんか？
+          </p>
+          <p class="hero__empathy">
+            <span class="hero__empathy-icon">✓</span>
+            忙しくて手が回らない方でも大丈夫です
+          </p>
+          <div class="hero__cta-group">
+            <a href="#cta" class="btn btn--primary btn--lg btn--glow">
+              無料で相談してみる
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <p class="hero__cta-note">相談だけでもOK・無理な営業なし</p>
+          </div>
+        </div>
+        <div class="hero__visual reveal reveal--delay">
+          <div class="hero__card hero__card--main">
+            <div class="hero__card-header">
+              <span>📈 集客ダッシュボード</span>
+              <span class="hero__card-status">稼働中</span>
+            </div>
+            <div class="hero__stats">
+              <div class="hero__stat">
+                <span class="hero__stat-label">新規来店</span>
+                <span class="hero__stat-value" data-count="120">0</span>
+                <span class="hero__stat-unit">% UP</span>
+              </div>
+              <div class="hero__stat">
+                <span class="hero__stat-label">予約導線</span>
+                <span class="hero__stat-value hero__stat-value--text">最適化</span>
+              </div>
+            </div>
+            <div class="hero__flow">
+              <div class="hero__flow-item">SNS</div>
+              <div class="hero__flow-arrow">→</div>
+              <div class="hero__flow-item">HP</div>
+              <div class="hero__flow-arrow">→</div>
+              <div class="hero__flow-item hero__flow-item--active">予約</div>
+            </div>
+          </div>
+          <div class="hero__float hero__float--1">🐕</div>
+          <div class="hero__float hero__float--2">✨</div>
+          <div class="hero__float hero__float--3">📱</div>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <span>scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ② 共感 -->
+    <section class="section section--pain" id="problem">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">PROBLEM</span>
+          <h2 class="section__title">こんなお悩み<br class="sp-only">ありませんか？</h2>
+        </div>
+        <div class="pain-grid">
+          <div class="pain-card reveal">
+            <div class="pain-card__icon">😔</div>
+            <p>最近、<strong>新規のお客様が増えていない</strong></p>
+          </div>
+          <div class="pain-card reveal reveal--delay-1">
+            <div class="pain-card__icon">📱</div>
+            <p>Instagramをやっているが、<strong>集客につながっていない</strong></p>
+          </div>
+          <div class="pain-card reveal reveal--delay-2">
+            <div class="pain-card__icon">⏰</div>
+            <p>忙しくて改善したいけど<strong>後回し</strong>になっている</p>
+          </div>
+          <div class="pain-card reveal reveal--delay-3">
+            <div class="pain-card__icon">❓</div>
+            <p><strong>何から手をつければいいか</strong>分からない</p>
+          </div>
+          <div class="pain-card pain-card--wide reveal">
+            <div class="pain-card__icon">🏪</div>
+            <p>他のサロンはうまくやっているのに<strong>違いが分からない</strong></p>
+          </div>
+        </div>
+        <div class="pain-closing reveal">
+          <p>その悩み、<span class="highlight">"やり方"</span>ではなく<br><span class="highlight highlight--accent">"仕組み"</span>の問題かもしれません</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ 問題の正体 -->
+    <section class="section section--truth" id="solution">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">INSIGHT</span>
+          <h2 class="section__title">なぜ頑張っても<br>集客がうまくいかないのか？</h2>
+        </div>
+        <div class="truth-content">
+          <div class="truth-intro reveal">
+            <p>多くのサロンが</p>
+            <div class="truth-bad">
+              <span>「Instagramだけ」</span>
+              <span>「HPだけ」</span>
+            </div>
+            <p>と<strong>バラバラに対策</strong>しています</p>
+          </div>
+          <div class="truth-divider reveal">
+            <span>しかし実際は</span>
+            <div class="truth-divider__arrow">👇</div>
+          </div>
+          <div class="ecosystem reveal">
+            <div class="ecosystem__center">
+              <span class="ecosystem__center-icon">🎯</span>
+              <span class="ecosystem__center-text">集客</span>
+            </div>
+            <div class="ecosystem__node ecosystem__node--1">
+              <span>📸</span>
+              <p>SNS</p>
+            </div>
+            <div class="ecosystem__node ecosystem__node--2">
+              <span>🔍</span>
+              <p>Google</p>
+            </div>
+            <div class="ecosystem__node ecosystem__node--3">
+              <span>🌐</span>
+              <p>HP</p>
+            </div>
+            <div class="ecosystem__node ecosystem__node--4">
+              <span>📅</span>
+              <p>予約導線</p>
+            </div>
+            <svg class="ecosystem__lines" viewBox="0 0 400 400" aria-hidden="true">
+              <circle cx="200" cy="200" r="120" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="8 6" opacity="0.3"/>
+            </svg>
+          </div>
+          <p class="truth-message reveal">
+            <span class="truth-message__icon">👉</span>
+            全部つながって初めて<strong>"集客"</strong>になります
+          </p>
+          <div class="truth-closing reveal">
+            <p>1つずつ頑張るのではなく、<br><strong>"全体設計"</strong>が必要です</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ ベネフィット -->
+    <section class="section section--benefit" id="benefit">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">BENEFIT</span>
+          <h2 class="section__title">仕組みを整えると<br>こう変わります</h2>
+        </div>
+        <div class="benefit-grid">
+          <div class="benefit-card reveal">
+            <div class="benefit-card__num">01</div>
+            <div class="benefit-card__icon">👥</div>
+            <h3>新規のお客様が<br>安定して来る</h3>
+          </div>
+          <div class="benefit-card reveal reveal--delay-1">
+            <div class="benefit-card__num">02</div>
+            <div class="benefit-card__icon">⏱️</div>
+            <h3>無駄な作業が減り<br>時間に余裕ができる</h3>
+          </div>
+          <div class="benefit-card reveal reveal--delay-2">
+            <div class="benefit-card__num">03</div>
+            <div class="benefit-card__icon">💎</div>
+            <h3>自分のサロンの<br>強みが伝わる</h3>
+          </div>
+          <div class="benefit-card reveal reveal--delay-3">
+            <div class="benefit-card__num">04</div>
+            <div class="benefit-card__icon">🚀</div>
+            <h3>「なんとなく集客」<br>から卒業できる</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑤ サービス -->
+    <section class="section section--service" id="service">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">SERVICE</span>
+          <h2 class="section__title">あなたのサロンに<br>合わせて整えます</h2>
+        </div>
+        <div class="service-grid">
+          <div class="service-card reveal">
+            <div class="service-card__num">①</div>
+            <div class="service-card__icon">📸</div>
+            <h3>Instagram設計</h3>
+            <p>投稿内容・導線を整える</p>
+          </div>
+          <div class="service-card reveal reveal--delay-1">
+            <div class="service-card__num">②</div>
+            <div class="service-card__icon">📍</div>
+            <h3>Google対策（MEO）</h3>
+            <p>検索から来店につなげる</p>
+          </div>
+          <div class="service-card reveal reveal--delay-2">
+            <div class="service-card__num">③</div>
+            <div class="service-card__icon">🌐</div>
+            <h3>HP改善</h3>
+            <p>サロンの魅力を伝える</p>
+          </div>
+          <div class="service-card reveal reveal--delay-3">
+            <div class="service-card__num">④</div>
+            <div class="service-card__icon">💬</div>
+            <h3>予約導線整理</h3>
+            <p>LINE・電話を一本化</p>
+          </div>
+        </div>
+        <div class="service-tagline reveal">
+          <span class="service-tagline__icon">👉</span>
+          <p>すべて<strong>丸投げ</strong>でも大丈夫です</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑥ 実績 -->
+    <section class="section section--results" id="results">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">RESULTS</span>
+          <h2 class="section__title">実際の改善事例</h2>
+        </div>
+        <div class="results-grid">
+          <div class="result-card reveal">
+            <div class="result-card__chart">
+              <div class="result-card__bar" style="--h: 100%"></div>
+              <div class="result-card__bar result-card__bar--after" style="--h: 120%"></div>
+            </div>
+            <div class="result-card__value">
+              <span class="result-card__number" data-count="120">0</span>
+              <span class="result-card__unit">% UP</span>
+            </div>
+            <p class="result-card__label">来店数</p>
+          </div>
+          <div class="result-card reveal reveal--delay-1">
+            <div class="result-card__icon-wrap">📈</div>
+            <div class="result-card__value">
+              <span class="result-card__text">大幅増加</span>
+            </div>
+            <p class="result-card__label">フォロワー増加</p>
+          </div>
+          <div class="result-card reveal reveal--delay-2">
+            <div class="result-card__icon-wrap">💰</div>
+            <div class="result-card__value">
+              <span class="result-card__text">改善</span>
+            </div>
+            <p class="result-card__label">売上改善</p>
+          </div>
+        </div>
+        <p class="results-note reveal">※実績は随時更新予定</p>
+      </div>
+    </section>
+
+    <!-- ⑦ 選ばれる理由 -->
+    <section class="section section--reasons" id="reasons">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">WHY US</span>
+          <h2 class="section__title">選ばれる3つの理由</h2>
+        </div>
+        <div class="reasons-grid">
+          <div class="reason-card reveal">
+            <div class="reason-card__badge">01</div>
+            <div class="reason-card__icon">🐾</div>
+            <h3>ペットサロン特化</h3>
+            <p>業界理解あり。サロンならではの課題を熟知しています。</p>
+          </div>
+          <div class="reason-card reveal reveal--delay-1">
+            <div class="reason-card__badge">02</div>
+            <div class="reason-card__icon">🤝</div>
+            <h3>丸投げOK</h3>
+            <p>忙しくても安心。お任せいただける体制を整えています。</p>
+          </div>
+          <div class="reason-card reveal reveal--delay-2">
+            <div class="reason-card__badge">03</div>
+            <div class="reason-card__icon">✨</div>
+            <h3>初心者でもOK</h3>
+            <p>難しいことなし。専門知識がなくても始められます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑧ FAQ -->
+    <section class="section section--faq" id="faq">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">FAQ</span>
+          <h2 class="section__title">よくあるご質問</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary class="faq-item__question">
+              <span>Q. 本当に効果ありますか？</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p>サロンごとに設計するため<strong>再現性があります</strong>。あなたのサロンの状況に合わせた施策をご提案します。</p>
+            </div>
+          </details>
+          <details class="faq-item reveal reveal--delay-1">
+            <summary class="faq-item__question">
+              <span>Q. 知識がなくても大丈夫？</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p><strong>すべてサポートします</strong>。専門用語を使わず、わかりやすくご説明します。</p>
+            </div>
+          </details>
+          <details class="faq-item reveal reveal--delay-2">
+            <summary class="faq-item__question">
+              <span>Q. 営業されませんか？</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p><strong>無理な営業は一切ありません</strong>。相談だけでも大歓迎です。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑨ CTA -->
+    <section class="section section--cta" id="cta">
+      <div class="cta__bg">
+        <div class="cta__blob"></div>
+      </div>
+      <div class="container">
+        <div class="cta-box reveal">
+          <h2 class="cta-box__title">まずは無料相談から<br>始めてみませんか？</h2>
+          <ul class="cta-box__points">
+            <li><span>✓</span> 相談だけでもOK</li>
+            <li><span>✓</span> 無理な営業なし</li>
+            <li><span>✓</span> 忙しい方も歓迎</li>
+          </ul>
+          <a href="#" class="btn btn--line btn--lg" id="lineCta">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            LINEで無料相談する
+          </a>
+          <p class="cta-box__note">24時間以内にご返信いたします</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑩ 継続 -->
+    <section class="section section--support" id="support">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">SUPPORT</span>
+          <h2 class="section__title">導入後も<br>ずっと伴走します</h2>
+        </div>
+        <div class="support-grid">
+          <div class="support-card reveal">
+            <div class="support-card__icon">📊</div>
+            <h3>月次レポート</h3>
+            <p>成果を可視化して、何が効いているか一目でわかります</p>
+          </div>
+          <div class="support-card reveal reveal--delay-1">
+            <div class="support-card__icon">💡</div>
+            <h3>改善提案を継続</h3>
+            <p>データに基づいた次の一手を、定期的にご提案します</p>
+          </div>
+          <div class="support-card reveal reveal--delay-2">
+            <div class="support-card__icon">🌱</div>
+            <h3>一緒に成長</h3>
+            <p>一緒にサロンを成長させるパートナーとして伴走します</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__logo">🐾 SalonFlow</p>
+      <p class="footer__copy">&copy; 2026 SalonFlow. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <a href="#cta" class="btn btn--primary btn--sm">無料相談</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
