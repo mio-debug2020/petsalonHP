@@ -8,6 +8,9 @@
   // ---- LINE URL (実際のURLに差し替えてください) ----
   const LINE_URL = 'https://line.me/R/ti/p/@YOUR_LINE_ID';
 
+  // ---- GAS Webアプリ URL（デプロイ後のURLに差し替え） ----
+  const GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxeZ7_PRaqG0MXZ_arJxDjmf2oXV0Yzhabnzjg-p1NGsWnjSl4vj2N-D-wsAsMNeU-A/exec';
+
   // ---- DOM Elements ----
   const header = document.getElementById('header');
   const menuBtn = document.getElementById('menuBtn');
@@ -197,5 +200,130 @@
       document.querySelector('.ecosystem__center')?.classList.remove('is-pulse');
     });
   });
+
+
+  // ---- お問い合わせフォーム → GAS ----
+  const contactForm = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
+  const submitBtn = document.getElementById('submitBtn');
+
+  function showFormMessage(text, type) {
+    if (!formMessage) return;
+    formMessage.textContent = text;
+    formMessage.className = 'form-message is-visible form-message--' + type;
+  }
+
+  function clearFormErrors() {
+    contactForm?.querySelectorAll('.is-error').forEach((el) => {
+      el.classList.remove('is-error');
+    });
+  }
+
+  function setFieldError(field) {
+    field?.classList.add('is-error');
+  }
+
+  function validateForm(form) {
+    clearFormErrors();
+    let valid = true;
+
+    const required = [
+      { id: 'salonName', label: 'サロン名' },
+      { id: 'name', label: 'お名前' },
+      { id: 'email', label: 'メールアドレス' },
+      { id: 'message', label: 'ご相談内容' },
+    ];
+
+    required.forEach(({ id }) => {
+      const field = form.querySelector('#' + id);
+      if (!field?.value.trim()) {
+        setFieldError(field);
+        valid = false;
+      }
+    });
+
+    const email = form.querySelector('#email');
+    if (email?.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      setFieldError(email);
+      valid = false;
+    }
+
+    const privacy = form.querySelector('#privacy');
+    if (!privacy?.checked) {
+      valid = false;
+    }
+
+    if (!valid) {
+      showFormMessage('未入力または形式が正しくない項目があります。', 'error');
+    }
+
+    return valid;
+  }
+
+  async function submitToGas(form) {
+    const body = new URLSearchParams({
+      salonName: form.salonName.value.trim(),
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      message: form.message.value.trim(),
+      sourceUrl: window.location.href,
+    });
+
+    const response = await fetch(GAS_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString(),
+    });
+
+    const data = await response.json();
+    if (!data.success) {
+      throw new Error(data.message || '送信に失敗しました');
+    }
+    return data;
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (GAS_ENDPOINT === 'YOUR_GAS_WEB_APP_URL_HERE') {
+        showFormMessage(
+          'GASのURLが未設定です。script.js の GAS_ENDPOINT を設定してください。',
+          'error'
+        );
+        return;
+      }
+
+      if (!validateForm(contactForm)) return;
+
+      submitBtn?.classList.add('is-loading');
+      submitBtn.disabled = true;
+      formMessage?.classList.remove('is-visible');
+
+      try {
+        await submitToGas(contactForm);
+        showFormMessage(
+          'お問い合わせを受け付けました。ご連絡ありがとうございます！',
+          'success'
+        );
+        contactForm.reset();
+      } catch (err) {
+        console.error(err);
+        showFormMessage(
+          err.message || '送信に失敗しました。時間をおいて再度お試しください。',
+          'error'
+        );
+      } finally {
+        submitBtn?.classList.remove('is-loading');
+        submitBtn.disabled = false;
+      }
+    });
+
+    contactForm.querySelectorAll('input, textarea').forEach((field) => {
+      field.addEventListener('input', () => field.classList.remove('is-error'));
+    });
+  }
+
 
 })();

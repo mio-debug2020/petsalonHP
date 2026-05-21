@@ -22,8 +22,9 @@
         <a href="#solution">解決策</a>
         <a href="#service">サービス</a>
         <a href="#faq">FAQ</a>
+        <a href="#contact">お問い合わせ</a>
       </nav>
-      <a href="#cta" class="header__cta btn btn--primary btn--sm">無料相談</a>
+      <a href="#contact" class="header__cta btn btn--primary btn--sm">無料相談</a>
       <button class="header__menu-btn" id="menuBtn" aria-label="メニューを開く" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -38,7 +39,8 @@
       <a href="#service">サービス</a>
       <a href="#results">実績</a>
       <a href="#faq">FAQ</a>
-      <a href="#cta" class="btn btn--primary">無料相談する</a>
+      <a href="#contact">お問い合わせ</a>
+      <a href="#contact" class="btn btn--primary">無料相談する</a>
     </nav>
   </div>
 
@@ -71,7 +73,7 @@
             忙しくて手が回らない方でも大丈夫です
           </p>
           <div class="hero__cta-group">
-            <a href="#cta" class="btn btn--primary btn--lg btn--glow">
+            <a href="#contact" class="btn btn--primary btn--lg btn--glow">
               無料で相談してみる
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -384,7 +386,57 @@
       </div>
     </section>
 
-    <!-- ⑨ CTA -->
+    <!-- ⑨ お問い合わせフォーム -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">CONTACT</span>
+          <h2 class="section__title">無料相談・お問い合わせ</h2>
+          <p class="section__lead">下記フォームよりお気軽にご連絡ください。<br>2営業日以内にご返信いたします。</p>
+        </div>
+        <div class="contact-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="salonName">サロン名 <span class="required">必須</span></label>
+                <input type="text" id="salonName" name="salonName" required placeholder="例：わんにゃんトリミングサロン" autocomplete="organization">
+              </div>
+              <div class="form-group">
+                <label for="name">お名前 <span class="required">必須</span></label>
+                <input type="text" id="name" name="name" required placeholder="例：山田 花子" autocomplete="name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">メールアドレス <span class="required">必須</span></label>
+                <input type="email" id="email" name="email" required placeholder="example@email.com" autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="phone">電話番号</label>
+                <input type="tel" id="phone" name="phone" placeholder="090-1234-5678" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">ご相談内容 <span class="required">必須</span></label>
+              <textarea id="message" name="message" required rows="5" placeholder="集客の悩みやご希望など、お気軽にご記入ください"></textarea>
+            </div>
+            <div class="form-group form-group--checkbox">
+              <label class="checkbox-label">
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <span>入力内容の取り扱いに同意する</span>
+              </label>
+            </div>
+            <div class="form-message" id="formMessage" role="alert" aria-live="polite"></div>
+            <button type="submit" class="btn btn--primary btn--lg btn--block" id="submitBtn">
+              <span class="btn__text">送信する</span>
+              <span class="btn__loading" hidden>送信中...</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑩ CTA（LINE） -->
     <section class="section section--cta" id="cta">
       <div class="cta__bg">
         <div class="cta__blob"></div>
@@ -406,7 +458,7 @@
       </div>
     </section>
 
-    <!-- ⑩ 継続 -->
+    <!-- ⑪ 継続 -->
     <section class="section section--support" id="support">
       <div class="container">
         <div class="section__header reveal">
@@ -442,7 +494,7 @@
   </footer>
 
   <div class="sticky-cta" id="stickyCta">
-    <a href="#cta" class="btn btn--primary btn--sm">無料相談</a>
+    <a href="#contact" class="btn btn--primary btn--sm">無料相談</a>
   </div>
 
   <script src="script.js"></script>
