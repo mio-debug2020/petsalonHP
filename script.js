@@ -9,7 +9,7 @@
   const LINE_URL = 'https://line.me/R/ti/p/@YOUR_LINE_ID';
 
   // ---- GAS Webアプリ URL（デプロイ後のURLに差し替え） ----
-  const GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxeZ7_PRaqG0MXZ_arJxDjmf2oXV0Yzhabnzjg-p1NGsWnjSl4vj2N-D-wsAsMNeU-A/exec';
+  const GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbw8AeUpKSB8FMMnOdKo5xo-5wM3cY7inPrmg7z6MXn7TeTp-LosuA62RLXhGDqxgK98/exec';
 
   // ---- DOM Elements ----
   const header = document.getElementById('header');
@@ -81,9 +81,9 @@
 
   revealElements.forEach((el) => revealObserver.observe(el));
 
-  // Hero content visible immediately
-  document.querySelectorAll('.hero .reveal').forEach((el) => {
-    setTimeout(() => el.classList.add('is-visible'), 100);
+  // Hero・お問い合わせは即表示（見えなくなるのを防ぐ）
+  document.querySelectorAll('.hero .reveal, #contact .reveal').forEach((el) => {
+    el.classList.add('is-visible');
   });
 
   // ---- Counter animation ----

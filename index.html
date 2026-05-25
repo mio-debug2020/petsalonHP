@@ -1,3 +1,4 @@
+<!-- test -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -81,33 +82,9 @@
           </div>
         </div>
         <div class="hero__visual reveal reveal--delay">
-          <div class="hero__card hero__card--main">
-            <div class="hero__card-header">
-              <span>📈 集客ダッシュボード</span>
-              <span class="hero__card-status">稼働中</span>
-            </div>
-            <div class="hero__stats">
-              <div class="hero__stat">
-                <span class="hero__stat-label">新規来店</span>
-                <span class="hero__stat-value" data-count="120">0</span>
-                <span class="hero__stat-unit">% UP</span>
-              </div>
-              <div class="hero__stat">
-                <span class="hero__stat-label">予約導線</span>
-                <span class="hero__stat-value hero__stat-value--text">最適化</span>
-              </div>
-            </div>
-            <div class="hero__flow">
-              <div class="hero__flow-item">SNS</div>
-              <div class="hero__flow-arrow">→</div>
-              <div class="hero__flow-item">HP</div>
-              <div class="hero__flow-arrow">→</div>
-              <div class="hero__flow-item hero__flow-item--active">予約</div>
-            </div>
-          </div>
-          <div class="hero__float hero__float--1">🐕</div>
-          <div class="hero__float hero__float--2">✨</div>
-          <div class="hero__float hero__float--3">📱</div>
+          <figure class="lp-image lp-image--hero">
+            <img src="images/hero.jpg" alt="トリミング中のわんちゃん" loading="eager" decoding="async">
+          </figure>
         </div>
       </div>
       <div class="hero__scroll">
@@ -123,6 +100,9 @@
           <span class="section__label">PROBLEM</span>
           <h2 class="section__title">こんなお悩み<br class="sp-only">ありませんか？</h2>
         </div>
+        <figure class="lp-image lp-image--wide reveal">
+          <img src="images/salon.jpg" alt="明るく清潔感のあるペットサロンの店内" loading="lazy" decoding="async">
+        </figure>
         <div class="pain-grid">
           <div class="pain-card reveal">
             <div class="pain-card__icon">😔</div>
@@ -236,6 +216,9 @@
             <h3>「なんとなく集客」<br>から卒業できる</h3>
           </div>
         </div>
+        <figure class="lp-image lp-image--standard reveal">
+          <img src="images/trimming.jpg" alt="丁寧なトリミングの工程" loading="lazy" decoding="async">
+        </figure>
       </div>
     </section>
 
@@ -246,6 +229,9 @@
           <span class="section__label">SERVICE</span>
           <h2 class="section__title">あなたのサロンに<br>合わせて整えます</h2>
         </div>
+        <figure class="lp-image lp-image--wide reveal">
+          <img src="images/signboard.jpg" alt="ペットサロンの看板・外観" loading="lazy" decoding="async">
+        </figure>
         <div class="service-grid">
           <div class="service-card reveal">
             <div class="service-card__num">①</div>
@@ -324,7 +310,11 @@
           <span class="section__label">WHY US</span>
           <h2 class="section__title">選ばれる3つの理由</h2>
         </div>
-        <div class="reasons-grid">
+        <div class="reasons-layout">
+          <figure class="lp-image lp-image--portrait reveal">
+            <img src="images/owner.jpg" alt="サポート担当者" loading="lazy" decoding="async">
+          </figure>
+          <div class="reasons-grid">
           <div class="reason-card reveal">
             <div class="reason-card__badge">01</div>
             <div class="reason-card__icon">🐾</div>
@@ -343,6 +333,7 @@
             <h3>初心者でもOK</h3>
             <p>難しいことなし。専門知識がなくても始められます。</p>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -389,12 +380,12 @@
     <!-- ⑨ お問い合わせフォーム -->
     <section class="section section--contact" id="contact">
       <div class="container">
-        <div class="section__header reveal">
+        <div class="section__header reveal is-visible">
           <span class="section__label">CONTACT</span>
           <h2 class="section__title">無料相談・お問い合わせ</h2>
           <p class="section__lead">下記フォームよりお気軽にご連絡ください。<br>2営業日以内にご返信いたします。</p>
         </div>
-        <div class="contact-wrap reveal">
+        <div class="contact-wrap reveal is-visible">
           <form class="contact-form" id="contactForm" novalidate>
             <div class="form-row">
               <div class="form-group">
