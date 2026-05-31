@@ -190,18 +190,6 @@
   handleHeaderScroll();
   handleStickyCta();
 
-  // ---- Ecosystem node pulse on hover (desktop) ----
-  const ecosystemNodes = document.querySelectorAll('.ecosystem__node');
-  ecosystemNodes.forEach((node) => {
-    node.addEventListener('mouseenter', () => {
-      document.querySelector('.ecosystem__center')?.classList.add('is-pulse');
-    });
-    node.addEventListener('mouseleave', () => {
-      document.querySelector('.ecosystem__center')?.classList.remove('is-pulse');
-    });
-  });
-
-
   // ---- お問い合わせフォーム → GAS ----
   const contactForm = document.getElementById('contactForm');
   const formMessage = document.getElementById('formMessage');
