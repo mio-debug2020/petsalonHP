@@ -47,20 +47,21 @@
   <main>
     <!-- ① ファーストビュー -->
     <section class="hero hero-with-video" id="hero">
-      <video
-        class="hero-bg-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        poster="images/hero.jpg"
-        aria-hidden="true"
-      >
-        <source src="videos/hero-bg-video.mp4" type="video/mp4">
-      </video>
-      <div class="hero-video-overlay" aria-hidden="true"></div>
-      <div class="container hero__inner">
+      <div class="hero-video-layer" aria-hidden="true">
+        <video
+          class="hero-bg-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="images/hero.jpg"
+        >
+          <source src="videos/hero-bg-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
+      </div>
+      <div class="container hero-content">
         <div class="hero__content reveal">
           <p class="hero__eyebrow">Pet Salon Marketing</p>
           <h1 class="hero__title">
