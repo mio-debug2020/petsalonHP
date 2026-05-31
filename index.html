@@ -46,8 +46,20 @@
 
   <main>
     <!-- ① ファーストビュー -->
-    <section class="hero" id="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
+    <section class="hero hero-with-video" id="hero">
+      <video
+        class="hero-bg-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="images/hero.jpg"
+        aria-hidden="true"
+      >
+        <source src="videos/hero-bg-video.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__content reveal">
           <p class="hero__eyebrow">Pet Salon Marketing</p>
@@ -66,20 +78,6 @@
             <a href="#contact" class="btn btn--primary btn--lg">無料で相談してみる</a>
             <a href="#contact" class="btn btn--outline btn--lg">今の導線を相談する</a>
             <p class="hero__cta-note">相談だけでもOK・返信は2営業日以内</p>
-          </div>
-        </div>
-        <div class="hero__visual reveal reveal--delay">
-          <div class="hero-video-wrap">
-            <video
-              class="hero-video"
-              autoplay
-              muted
-              loop
-              playsinline
-              poster="images/hero.jpg"
-            >
-              <source src="videos/hero-bg-video.mp4" type="video/mp4">
-            </video>
           </div>
         </div>
       </div>

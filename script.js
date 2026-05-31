@@ -86,6 +86,17 @@
     el.classList.add('is-visible');
   });
 
+  // ヒーロー動画の自動再生（iOS等のフォールバック）
+  const heroVideo = document.querySelector('.hero-bg-video');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    const playVideo = () => {
+      heroVideo.play().catch(() => {});
+    };
+    playVideo();
+    heroVideo.addEventListener('loadeddata', playVideo);
+  }
+
   // ---- Counter animation ----
   function animateCounter(el, target, duration = 1500) {
     const start = performance.now();
